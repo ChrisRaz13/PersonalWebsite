@@ -1,7 +1,5 @@
 package com.personalwebsite.entities;
 
-import java.sql.Timestamp;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -12,13 +10,11 @@ public class Portfolio {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String title;
     private String description;
     private String projectUrl;
-    private Timestamp createdAt;
+    private String imageUrl;
 
-    // Getters and setters
 
     public Long getId() {
         return id;
@@ -52,11 +48,12 @@ public class Portfolio {
         this.projectUrl = projectUrl;
     }
 
-    public Timestamp getCreatedAt() {
-        return createdAt;
-    }
+	public String getImageUrl() {
+		return imageUrl;
+	}
 
-    public void setCreatedAt(Timestamp createdAt) {
-        this.createdAt = createdAt;
-    }
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
+	}
+
 }
