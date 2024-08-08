@@ -1,34 +1,18 @@
 package com.personalwebsite.entities;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class UserTest {
+public class UserTest {
 
-	@BeforeAll
-	static void setUpBeforeClass() throws Exception {
-	}
+    @Test
+    public void testUser() {
+        User user = new User();
+        user.setUsername("testuser");
+        user.setPassword("password");
 
-	@AfterAll
-	static void tearDownAfterClass() throws Exception {
-	}
-
-	@BeforeEach
-	void setUp() throws Exception {
-	}
-
-	@AfterEach
-	void tearDown() throws Exception {
-	}
-
-	@Test
-	void test() {
-		fail("Not yet implemented");
-	}
-
+        assertEquals("testuser", user.getUsername());
+        assertEquals("password", user.getPassword());
+    }
 }
