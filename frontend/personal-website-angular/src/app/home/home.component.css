@@ -1,9 +1,74 @@
 /* Home page specific styles */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #b4cfe9;
+  font-family: Oswald, sans-serif;
+  color: rgb(255, 255, 255);
+}
+
+.content-wrapper {
+  padding: 20px;
+  text-align: center;
+  flex-grow: 1;
+}
+
 h1 {
   font-size: 2.5em;
   margin-bottom: 10px;
 }
 
 p {
-  font-size: 1.2em;
+  font-size: 2.2em;
+}
+
+.marquee {
+  width: 14in; /* Fixed width of 14 inches */
+  height: 7vh;
+  display: flex;
+  justify-content: flex-start; /* Start text at the very left */
+  align-items: center;
+  overflow: hidden;
+  background-color: #000000; /* Background color */
+  margin: 0 auto; /* Center the marquee bar on the page */
+  border-radius: 55px; /* Add rounded corners if desired */
+  margin-top: 20vh; /* Adjust this value to move the marquee lower */
+}
+
+.marquee-inner {
+  display: flex;
+  animation: marquee 60s linear infinite; /* Adjust speed as needed */
+  width: max-content;
+}
+
+.marquee-text {
+  color: #d6ddf6;
+  font-style: italic;
+  white-space: nowrap;
+  font-size: 3em;
+  text-transform: uppercase;
+  padding-right: 2em; /* Space between the two texts */
+}
+
+/* Keyframes for continuous scrolling */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.footer {
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  position: relative;
+  bottom: 0;
 }

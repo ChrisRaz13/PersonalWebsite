@@ -1,83 +1,70 @@
-/* Reset some default styles */
-body, h1, h2, h3, p, ul {
+/* Home page specific styles */
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #ffffff; /* White text */
+}
+
+p {
+  font-size: 1.2em;
+  color: #ffffff; /* White text */
+}
+
+body {
+  height: 100%;
   margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
+  color: #ffffff; /* White text */
+  background-color: #76b4f6; /* Dark blue background */
+  font-family: Oswald, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-body {
-  line-height: 1.6;
+.marquee {
+  width: 80%; /* Adjust the width as needed */
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #f8cb74; /* Background color of the marquee bar */
+  border-radius: 25px; /* Rounded corners */
+  margin: 20px 0; /* Margin to create space around the marquee */
+  padding: 10px;
 }
 
-/* Set a background color and basic padding */
-body {
-  background-color: #f4f4f4;
-  padding: 20px;
-}
-
-header {
-  background: #333;
-  color: #fff;
-  padding: 10px 0;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-header nav a {
-  color: #fff;
-  text-decoration: none;
-  padding: 10px 15px;
-}
-
-header nav a:hover {
-  background: #444;
-}
-
-/* Main content styling */
-main {
-  max-width: 900px;
-  margin: 20px auto;
-  background: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Footer styling */
-footer {
-  background: #333;
-  color: #fff;
-  text-align: center;
-  padding: 10px 0;
-  margin-top: 20px;
-  position: fixed;
-  bottom: 0;
+.marquee-inner {
+  display: flex;
   width: 100%;
+  animation: marquee 15s linear infinite; /* Adjust speed as needed */
 }
 
-/* Add some padding to sections */
-section {
-  margin-bottom: 20px;
+.marquee-text {
+  white-space: nowrap;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  color: #001f3f; /* Dark blue text inside the marquee */
 }
 
-/* Style headings */
-h1, h2 {
-  margin-bottom: 15px;
-  color: #333;
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
-/* Links in the main content */
-main a {
-  color: #333;
-  text-decoration: none;
+.w-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-main a:hover {
-  text-decoration: underline;
+* {
+  box-sizing: border-box;
 }
-
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
-  header nav a {
-    display: bl
-  }}
