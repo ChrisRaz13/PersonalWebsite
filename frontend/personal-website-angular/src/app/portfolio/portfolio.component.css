@@ -1,0 +1,16 @@
+/* Portfolio page specific styles */
+h1 {
+  font-size: 2.2em;
+  margin-bottom: 15px;
+}
+
+.project-item {
+  background: #eee;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.project-item:hover {
+  background: #ddd;
+}

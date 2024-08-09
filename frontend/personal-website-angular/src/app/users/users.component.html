@@ -1,0 +1,14 @@
+<div>
+  <h2>Users</h2>
+ <!-- src/app/components/users/users.component.html -->
+<div *ngIf="users.length; else noUsers">
+  <h2>Users List</h2>
+  <ul>
+    <li *ngFor="let user of users">
+      {{ user.username }} - {{ user.password }}
+    </li>
+  </ul>
+</div>
+<ng-template #noUsers>
+  <p>No users available.</p>
+</ng-template>
