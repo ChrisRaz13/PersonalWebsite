@@ -1,14 +1,16 @@
-<div>
-  <h2>Users</h2>
- <!-- src/app/components/users/users.component.html -->
-<div *ngIf="users.length; else noUsers">
-  <h2>Users List</h2>
-  <ul>
-    <li *ngFor="let user of users">
-      {{ user.username }} - {{ user.password }}
-    </li>
-  </ul>
-</div>
-<ng-template #noUsers>
-  <p>No users available.</p>
-</ng-template>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Email</th>
+      <th>Username</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{ user.id }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.username }}</td>
+    </tr>
+  </tbody>
+</table>

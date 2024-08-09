@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { UsersComponent } from './users/users.component';
+import { HomeComponent } from './home/home.component'; // Adjust the path
+import { UsersComponent } from './users/users.component'; // Adjust the path
 
 const routes: Routes = [
-  { path: 'users', component: UsersComponent }
+  { path: '', component: HomeComponent }, // Set HomeComponent as the default route
+  { path: 'users', component: UsersComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

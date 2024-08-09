@@ -10,9 +10,9 @@ public class UserTest {
     public void testUser() {
         User user = new User();
         user.setUsername("testuser");
-        user.setPassword("password");
+        user.setEmail("email");
 
         assertEquals("testuser", user.getUsername());
-        assertEquals("password", user.getPassword());
+        assertEquals("email", user.getEmail());
     }
 }
