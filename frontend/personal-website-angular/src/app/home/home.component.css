@@ -1,4 +1,3 @@
-/* Home page specific styles */
 body {
   margin: 0;
   padding: 0;
@@ -9,6 +8,24 @@ body {
   background-color: #b4cfe9;
   font-family: Oswald, sans-serif;
   color: rgb(255, 255, 255);
+}
+
+.name-container {
+  padding-top: 50%;
+  text-align: center;
+  width: 100%; /* Ensure it aligns with the marquee width */
+}
+
+.name-line {
+  font-size: 40em; /* Adjust the size to your preference */
+  margin-bottom: .5em;
+  color: hsla(0, 0%, 100%, 0.94); /* Text color for the name */
+}
+
+.name-line.small {
+  font-size: 20em; /* Adjust the size to fit below "Chris" */
+  margin-top: .5em;
+  color: #ffffff; /* Text color for the surname */
 }
 
 .content-wrapper {
@@ -27,16 +44,17 @@ p {
 }
 
 .marquee {
-  width: 14in; /* Fixed width of 14 inches */
-  height: 7vh;
+  width: 110em; /* Fixed width of 14 inches */
+  height: 12em;
   display: flex;
   justify-content: flex-start; /* Start text at the very left */
   align-items: center;
   overflow: hidden;
   background-color: #000000; /* Background color */
   margin: 0 auto; /* Center the marquee bar on the page */
-  border-radius: 55px; /* Add rounded corners if desired */
-  margin-top: 20vh; /* Adjust this value to move the marquee lower */
+  border-radius: 12em; /* Add rounded corners if desired */
+  margin-top: 10em; /* Adjust this value to move the marquee lower */
+  margin-bottom: 10em;
 }
 
 .marquee-inner {
@@ -46,10 +64,10 @@ p {
 }
 
 .marquee-text {
-  color: #d6ddf6;
+  color: #ffffff;
   font-style: italic;
   white-space: nowrap;
-  font-size: 3em;
+  font-size: 3.3em;
   text-transform: uppercase;
   padding-right: 2em; /* Space between the two texts */
 }
